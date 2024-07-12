@@ -58,7 +58,6 @@ class HabitAPITestCase(APITestCase):
         url = reverse("habits:habit_list")
         response = self.client.get(url)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
-        # print(response.json())
         data = {
             "count": 1,
             "next": None,

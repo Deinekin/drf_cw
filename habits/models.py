@@ -14,7 +14,7 @@ class Habit(models.Model):
     )
 
     creator = models.ForeignKey(
-        AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE, verbose_name="Создатель"
+        AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Создатель"
     )
     place = models.CharField(max_length=100, verbose_name="Место")
     time = models.TimeField(verbose_name="Время выполнения")

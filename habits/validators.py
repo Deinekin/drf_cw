@@ -28,8 +28,6 @@ class TimeDurationValidator:
         self.time_to_action = time
 
     def __call__(self, value):
-        duration = dict(value).get(self.time_to_action)
-        print(type(value.get(self.time_to_action)))
         if value.get(self.time_to_action) > timedelta(seconds=120):
             raise ValidationError("Время выполнения должно быть не больше 120 секунд.")
 
